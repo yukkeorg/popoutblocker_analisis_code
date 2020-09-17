@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Check Popupblock</title>
+</head>
+<body>
+  <h1>トップページ</h1>
+  <a id="popupblocklink" href="#">次のページをポップアップして表示</a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA==" crossorigin="anonymous"></script>
+  <script>
+  $(function() {
+    $("popupblocklink").on("click", (event) => {
+      $.ajax("/data.json").done(() => {
+        window.open("/next.html");
+      });
+    });
+  });
+  </script>
+</body>
+</html>
