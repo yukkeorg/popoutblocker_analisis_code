@@ -22,6 +22,7 @@
       $subwindow = window.open("");
       $.ajax("/data.json").done(() => {
         $subwindow.location = "/next.html";
+        $subwindow.name = "NextPage";
       });
       $e.preventDefault();
     });
