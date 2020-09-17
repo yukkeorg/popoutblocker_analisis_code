@@ -12,8 +12,9 @@
   <script>
   $(function() {
     $("#popupblocklink").on("click", ($e) => {
+      $subwindow = window.open("");
       $.ajax("/data.json").done(() => {
-        window.open("/next.html");
+        $subwindow.location = "/next.html";
       });
       $e.preventDerault();
     });
